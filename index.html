@@ -26,7 +26,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li class="active"><a href="#box-wrapper">Home <span class="sr-only">(current)</span></a></li>
           <li><a href="#about-me">About</a></li>
           <li><a href="#my-portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -168,6 +168,22 @@
     </div>
   </div>
 
+  <div class="container" id="media">
+    <div class="row text-center">
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-8">
+        <a href="https://github.com/Roblester09" target="_blank"><img src="images/github.png" width="100px" alt="github"></a>
+        <a href="https://www.linkedin.com/in/robert-lester-a0258784/" target="_blank"><img src="images/linkedin.png" width="100px" alt="linkedin"></a>
+        <a href="http://stackoverflow.com/users/7147176/robert-l" target="_blank"><img src="images/overflow.png" width="100px" alt="stack overflow">
+      </div>
+      <div class="col-md-2">
+
+      </div>
+    </div>
+  </div>
+
   <footer class="footer text-center">
     <p>&copy; Copyright 2017 Robert Lester</p>
   </footer>
@@ -178,5 +194,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script>
+  $(document).on('click', 'a', function(event){
+      event.preventDefault();
+
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+  });
+
+  $('.product-view a.product-image').on('click', function(e) {
+        e.preventDefault();
+  });
+</script>
 </body>
 </html>
