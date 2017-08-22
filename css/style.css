@@ -43,6 +43,10 @@
   color: white;
 }
 
+.well-height {
+  height: 350px;
+}
+
 #contact {
   width: 100%;
   background-color: #ECECEA;
